@@ -1,0 +1,70 @@
+$globals
+    padding: 5px 10px
+    steel: #202224
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    font-family: "Helvetica Neue"
+    font-weight: 400
+    font-size: 13px
+    line-height: 1.4em
+    background: $steel
+    color: #fff
+    -webkit-font-smoothing: antialiased
+
+#header
+    background: shade($steel, 10)
+    position: fixed
+    top: 0
+    z-index: 99
+    width: 100%
+
+#status
+    padding: $padding
+
+#logo
+    padding: $padding
+    display: none
+    font-size: 2em
+    margin-bottom: 0.2em
+    font-family: "Caecilia LT Std"
+
+#peers
+    display: none
+
+.indicator
+    display: inline-block
+    width: 4px
+    height: 4px
+    border-radius: 4px
+    background: red
+    margin-right: 5px
+    position: relative
+    top: -1px
+    display: none
+
+.message
+    padding: $padding
+    .username
+        font-weight: bold
+        margin-right: 0.4em
+
+.notice
+    font-style: italic
+    opacity: 0.5
+
+input
+    position: fixed
+    font: inherit
+    bottom: 0
+    width: 100%
+    padding: $padding
+    border: none
+    outline: none
+    background: shade($steel, -20)
+    color: #fff
+

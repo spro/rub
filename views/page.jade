@@ -1,0 +1,42 @@
+extends base
+
+block styles
+    link(rel='stylesheet', href='/chat.css')
+
+block body
+
+    #header
+        h1#logo qwyp
+        #status
+        p#peers
+
+    #messages
+
+    input#message(placeholder="Enter a message")
+
+block scripts
+
+    script(type='text/html')#status-template
+        p
+            | Welcome to 
+            span.room
+            | , 
+            span.username
+            | .
+
+    script(type='text/html')#message-template
+        .message
+            .indicator
+            span.username
+            span.body
+
+    script(type='text/html')#notice-template
+        .message.notice
+            span.body
+
+    script(src='/js/jquery.min.js')
+    script(src='/js/underscore-min.js')
+    script(src='/socket.io/socket.io.js')
+    script.
+        window.room = "#{ room }";
+    script(src='/chat.js')
